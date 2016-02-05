@@ -1,0 +1,134 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+void main()
+{
+char ch;
+int gd=DETECT,gm,l=40,t=150,r=60,b=340,i;
+initgraph(&gd,&gm,"c:\\TC\\BGI");
+setbkcolor(RED);
+gotoxy(10,2);
+printf("CIANO");
+for(i=0;i<14;i++)
+{
+setcolor(GREEN);
+rectangle(l,t,r,b);
+floodfill(l+2,t+2,GREEN);
+l+=25;r+=25;
+}
+l=52;r=72;b=280;
+for(i=0;i<14;i++)
+{
+if(i==2||i==6||i==9||i==13)
+goto label;
+setcolor(BLUE);
+rectangle(l,t,r,b);
+floodfill(l+2,t+2,BLUE);
+label:
+l+=25;r+=25;
+}
+while((ch=getch())!='e')
+{
+ switch(ch)
+ {
+ case '`':sound(131);
+	  delay(35);
+	  nosound();
+	  break;
+
+ case '~':sound(138);
+	  delay(35);
+	  nosound();
+	  break;
+ case '1':sound(146);
+	  delay(35);
+	  nosound();
+	  break;
+ case '!':sound(155);
+	  delay(35);
+	  nosound();
+	  break;
+ case '2':sound(165);
+	  delay(35);
+	  nosound();
+	  break;
+ case '3':sound(175);
+	  delay(35);
+	  nosound();
+	  break;
+ case '#':sound(185);
+	  delay(35);
+	  nosound();
+	  break;
+ case '4':sound(196);
+	  delay(35);
+	  nosound();
+	  break;
+ case '$':sound(208);
+	  delay(35);
+	  nosound();
+	  break;
+ case '5':sound(220);
+	  delay(35);
+	  nosound();
+	  break;
+ case '%':sound(233);
+	  delay(35);
+	  nosound();
+	  break;
+ case '6':sound(246);
+	  delay(35);
+	  nosound();
+	  break;
+ case '7':sound(261);
+	  delay(35);
+	  nosound();
+	   break;
+ case '&':sound(278);
+	  delay(35);
+	  nosound();
+	   break;
+ case '8':sound(293);
+	  delay(35);
+	  nosound();
+	   break;
+ case '*':sound(312);
+	  delay(35);
+	  nosound();
+	   break;
+ case '9':sound(330);
+	  delay(35);
+	  nosound();
+	   break;
+ case '0':sound(350);
+	  delay(35);
+	  nosound();
+	   break;
+ case ')':sound(370);
+	  delay(35);
+	  nosound();
+	   break;
+ case '-':sound(390);
+	  delay(35);
+	  nosound();
+	   break;
+ case '_':sound(415);
+	  delay(35);
+	  nosound();
+	   break;
+ case '=':sound(440);
+	  delay(35);
+	  nosound();
+	   break;
+ case '+':sound(446);
+	  delay(35);
+	  nosound();
+	   break;
+ case '|':sound(493);
+	  delay(35);
+	  nosound();
+}
+}
+getch();
+closegraph();
+}
